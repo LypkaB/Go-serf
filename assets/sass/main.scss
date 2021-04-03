@@ -1,3 +1,10 @@
+@import 'vendors/normalize';
+@import 'abstracts/mixins';
+@import 'base/font';
+
 * {
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    font-family: 'FiraSans', sans-serif;
+    font-weight: 400;
 }
