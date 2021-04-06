@@ -9,3 +9,40 @@
         font-display: swap;
     }
 }
+
+@mixin font($size: null, $weight: null, $color: null, $line-height: null) {
+    @if $size != null {
+        font-size: $size
+    }
+    @if $weight != null {
+        font-weight: $weight
+    }
+    @if $color != null {
+        color: $color
+    }
+    @if $line-height != null {
+        line-height: $line-height
+    }
+}
+
+@mixin d-flex($a-items: center, $j-content: space-between, $f-direction: null) {
+    display: flex;
+    align-items: $a-items;
+    justify-content: $j-content;
+
+    @if $f-direction != null {
+        flex-direction: $f-direction;
+    }
+}
+
+@mixin before-line {
+    &:before {
+        content: '';
+        width: 80px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 12px;
+        transform: translateX(-130%);
+    }
+}

@@ -1,0 +1,203 @@
+.presentation {
+    background: url('../images/presentation/presentation__bg.jpg') no-repeat center / cover;
+
+    .container {
+        position: relative;
+        height: 100vh;
+    }
+
+    &__sidebar {
+        width: 110px;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        @include d-flex(null, space-between, column);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &-bg {
+            width: 110px;
+            height: 100px;
+            background-color: $primary-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &-title {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 3.6;
+            text-transform: uppercase;
+            white-space: nowrap;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+
+            span {
+                font-weight: 200;
+            }
+        }
+
+        &-item {
+            margin-bottom: 35px;
+
+            span {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+
+        &-search {
+            margin-bottom: 20px;
+        }
+
+        &-date {
+            margin-bottom: 30px;
+
+            span {
+                display: block;
+            }
+        }
+
+        &-day {
+            font-size: 52px;
+            font-weight: 800;
+        }
+
+        &-month {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        &-location {
+            display: flex;
+            justify-content: center;
+
+            div {
+                margin-right: 8px;
+            }
+
+            span {
+                @include font(12px, 300, $line-height: 1.2);
+            }
+        }
+    }
+
+    .tns-outer {
+        padding-left: 110px;
+        text-align: right;
+    }
+
+    &__content {
+        &-controls {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            z-index: 9;
+        }
+
+        &-item {
+            overflow-x: hidden;
+        }
+
+        &-map {
+            margin-right: -75px;
+            margin-bottom: 115px;
+
+            .line-animation {
+                stroke-dashoffset: 600;
+                stroke-dasharray: 600;
+                animation: animdash 5s infinite 2s;
+            }
+
+            @keyframes animdash {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+        }
+
+        &-desc {
+            padding-right: 70px;
+            padding-bottom: 30px;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        &-subtitle {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            position: relative;
+            @include before-line;
+        }
+
+        &-title {
+            font-size: 80px;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
+
+        &-subtext {
+            margin-top: 10px;
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        &-pagination {
+            text-align: right;
+            padding-right: 70px;
+            @include d-flex($j-content: flex-end);
+
+            li + li {
+                margin-left: 40px;
+            }
+
+            li {
+                padding-top: 6px;
+                flex-basis: 15%;
+                @include d-flex();
+                border-top: 4px solid white;
+            }
+
+            .tns-nav-active {
+                border-top: 4px solid $green;
+            }
+        }
+
+        &-number {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        &-name {
+            font-weight: 300;
+            text-transform: capitalize;
+        }
+    }
+
+    &__arrows {
+        position: absolute;
+        left: 150px;
+        bottom: 20px;
+
+        .animation-arrows {
+            animation: animarrows 2s infinite 2s;
+        }
+
+        @keyframes animarrows {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(35%);
+            }
+        }
+    }
+}

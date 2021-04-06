@@ -1,10 +1,44 @@
 @import 'vendors/normalize';
+@import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'base/font';
 
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'FiraSans', sans-serif;
     font-weight: 400;
+    color: white;
 }
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+@import 'components/titles';
+@import 'blocks/blocks';
+@import 'media/media';
