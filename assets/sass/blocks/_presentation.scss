@@ -105,9 +105,13 @@
             overflow-x: hidden;
         }
 
+        &-wrap {
+            height: 93vh;
+            @include d-flex(null, space-between, column);
+        }
+
         &-map {
             margin-right: -75px;
-            margin-bottom: 115px;
 
             .line-animation {
                 stroke-dashoffset: 600;
