@@ -3,7 +3,7 @@
 @import 'abstracts/mixins';
 @import 'base/font';
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -14,8 +14,15 @@ body {
 }
 
 .container {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
+
+    @media (min-width: 1980px) {
+        width: 1920px;
+        border-width: 0 1px 0 1px;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
 }
 
 img {

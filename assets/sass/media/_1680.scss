@@ -1,0 +1,40 @@
+@media (min-width: 1680px) {
+    .section-title {
+        font-size: 140px;
+    }
+
+    /*<----- Presentation ----->*/
+    .presentation {
+        &__sidebar {
+            &-item {
+                margin-bottom: 40px;
+
+                div {
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            &-search {
+                margin-bottom: 40px;
+            }
+
+            &-location {
+                div {
+                    margin-top: 2px;
+                }
+
+                span {
+                    font-size: initial;
+                }
+            }
+        }
+
+        &__content-name {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 60px;
+    }
+
+    /*<----- Presentation ----->*/
+    .presentation {
+        &__sidebar {
+            width: 80px;
+
+            &-btn {
+                top: 25px;
+                right: 20px;
+            }
+
+            &-bg {
+                width: 80px;
+                height: 70px;
+            }
+
+            &-title {
+                font-size: 20px;
+                line-height: 3.8;
+            }
+
+            &-date {
+                margin-bottom: 20px;
+            }
+
+            &-day {
+                font-size: 32px;
+            }
+
+            &-month {
+                font-size: 10px;
+            }
+
+            &-location {
+                flex-direction: column;
+
+                div {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__content {
+            &-desc,
+            &-pagination {
+                padding-right: 30px;
+            }
+
+            &-slider {
+                margin-bottom: 20px;
+            }
+
+            &-map {
+                margin-left: -50%;
+            }
+
+            &-subtitle {
+                font-size: 14px;
+
+                &:before {
+                    top: 7px;
+                }
+            }
+
+            &-title {
+                font-size: 52px;
+            }
+
+            &-subtext {
+                font-size: 30px;
+            }
+
+            &-controls {
+                padding-right: 25px;
+                margin-bottom: 0;
+            }
+
+            &-pagination {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding-left: 110px;
+
+                li + li {
+                    margin-left: 0;
+                }
+
+                li {
+                    flex-basis: 35%;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

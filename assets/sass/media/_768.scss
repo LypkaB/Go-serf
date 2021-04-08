@@ -1,0 +1,81 @@
+@media (max-width: 768px) {
+    /*<----- Presentation ----->*/
+    .presentation {
+        &__sidebar {
+            left: -100px;
+            transition: all 800ms;
+
+            &.sidebar_active {
+                left: 0;
+            }
+
+            &-btn {
+                visibility: visible;
+            }
+        }
+
+        .tns-outer {
+            padding-left: 0;
+            text-align: initial;
+        }
+
+        &__content {
+            &-wrap {
+                height: 100%;
+                @include d-flex(null, space-between, column);
+                padding-bottom: 15px;
+            }
+
+            &-slider {
+                margin-bottom: 50px;
+            }
+
+            &-inner {
+                height: initial;
+            }
+
+            &-map {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            &-desc {
+                margin-top: initial;
+                padding-bottom: 0;
+            }
+
+            &-title {
+                margin-bottom: 25px;
+            }
+
+            &-controls {
+                position: initial;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 35px;
+                margin-bottom: 50px;
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+
+        &__arrows {
+            left: 50px;
+
+            &.arrows_hidden {
+                visibility: hidden;
+            }
+
+            &.arrows_show-anim {
+                visibility: hidden;
+                animation: show-anim 0s 400ms forwards;
+            }
+
+            @keyframes show-anim {
+                to { visibility: visible; }
+            }
+        }
+    }
+}

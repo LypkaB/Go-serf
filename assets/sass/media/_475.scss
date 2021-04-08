@@ -1,0 +1,65 @@
+@media (max-width: 475px) {
+    /*<----- Presentation ----->*/
+    .presentation {
+        &__content {
+            &-desc,
+            &-pagination {
+                padding-right: 20px;
+            }
+
+            &-name {
+                padding-left: 5px;
+            }
+
+            &-controls {
+                padding-right: 15px;
+            }
+        }
+
+        &__arrows {
+            left: 43px;
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    /*<----- Presentation ----->*/
+    .presentation {
+        &__sidebar {
+            background-color: lighten(black, 15%);
+        }
+
+        &__content {
+            &-slider {
+                margin-bottom: 0;
+            }
+
+            &-subtitle {
+                font-size: 12px;
+
+                &:before {
+                    top: 6px;
+                }
+            }
+
+            &-title {
+                font-size: 40px;
+            }
+
+            &-subtext {
+                font-size: 24px;
+            }
+
+            &-name {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    /*<----- Presentation ----->*/
+    .presentation__content-map {
+        margin-left: -100%;
+    }
+}

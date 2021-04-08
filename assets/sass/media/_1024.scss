@@ -1,0 +1,92 @@
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 100px;
+    }
+
+    /*<----- Presentation ----->*/
+    .presentation {
+        &__sidebar {
+            width: 100px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+
+            &-bg {
+                width: 100px;
+                height: 85px;
+            }
+
+            &-title {
+                font-size: 24px;
+                line-height: 4;
+            }
+
+            &-item {
+                margin-bottom: 25px;
+            }
+
+            &-day {
+                font-size: 40px;
+            }
+
+            &-month {
+                font-size: 12px;
+            }
+        }
+
+        &__content {
+            &-desc,
+            &-pagination {
+                padding-right: 40px;
+            }
+
+            &-subtitle {
+                font-size: 16px;
+
+                &:before {
+                    top: 8px;
+                }
+            }
+
+            &-title {
+                font-size: 60px;
+            }
+
+            &-subtext {
+                font-size: 32px;
+            }
+
+            &-controls {
+                right: 35px;
+            }
+
+            &-pagination li {
+                border-top-width: 2px;
+            }
+
+            &-number {
+                font-size: 20px;
+            }
+
+            &-name {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    /*<----- Presentation ----->*/
+    .section-title,
+    .presentation__sidebar-title,
+    .presentation__content-pagination,
+    .presentation__arrows {
+        cursor: default;
+    }
+
+    .presentation {
+        &__sidebar-search,
+        &__content-controls button {
+            cursor: pointer;
+        }
+    }
+}
