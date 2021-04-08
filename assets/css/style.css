@@ -1166,6 +1166,10 @@ button {
     margin-bottom: 0;
   }
 
+  .presentation__content-map {
+    margin-left: -75%;
+  }
+
   .presentation__content-subtitle {
     font-size: 12px;
   }
