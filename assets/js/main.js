@@ -14,14 +14,14 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.presentation__sidebar').classList.toggle('sidebar_active');
         arrowsPresentation.classList.toggle('arrows_hidden');
         sidebarBtnClicks++;
-        arrowsPresentation.classList.toggle('arrows_show-anim',sidebarBtnClicks % 2 === 0);
+        arrowsPresentation.classList.toggle('arrows_show-anim', sidebarBtnClicks % 2 === 0);
     })
 
     /*<----- Adaptive for slider map ----->*/
     const mapPresentation = document.querySelectorAll('.presentation__content-map svg');
 
     if (document.querySelector('body').clientHeight >= 940) {
-        mapPresentation.forEach( (item, i) => {
+        mapPresentation.forEach((item, i) => {
             mapPresentation[i].setAttribute('height', '700');
         })
     }
