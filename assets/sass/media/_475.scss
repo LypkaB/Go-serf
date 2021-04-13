@@ -23,6 +23,14 @@
 }
 
 @media (max-width: 414px) {
+    .section-mark {
+        font-size: 12px;
+
+        &:before {
+            top: 6px;
+        }
+    }
+
     /*<----- Presentation ----->*/
     .presentation {
         &__sidebar {
@@ -36,14 +44,6 @@
 
             &-map {
                 margin-left: -75%;
-            }
-
-            &-subtitle {
-                font-size: 12px;
-
-                &:before {
-                    top: 6px;
-                }
             }
 
             &-title {

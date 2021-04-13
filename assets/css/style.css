@@ -430,14 +430,12 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 @media (min-width: 1980px) {
   .container {
     width: 1920px;
-    border-width: 0 1px 0 1px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -466,16 +464,71 @@ button {
 }
 
 .section-title {
+  margin-left: 190px;
+  font-size: 80px;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title:before {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #4af6cd;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.section-title-sign {
   display: inline-block;
   width: 100px;
   font-size: 120px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.03);
   line-height: 0.76;
   text-transform: uppercase;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 40px;
+  left: -30px;
+}
+
+.section-mark,
+.section-subtitle {
+  display: block;
+  text-align: right;
+}
+
+.section-mark {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  position: relative;
+}
+
+.section-mark:before {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 12px;
+  -webkit-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  transform: translateX(-130%);
+}
+
+.section-subtitle {
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-subtitle span {
+  font-weight: 200;
 }
 
 .presentation {
@@ -483,8 +536,13 @@ button {
 }
 
 .presentation .container {
-  position: relative;
   height: 100vh;
+}
+
+.presentation .section-title-sign {
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.15);
 }
 
 .presentation__sidebar {
@@ -674,26 +732,6 @@ button {
   text-transform: uppercase;
 }
 
-.presentation__content-subtitle {
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  position: relative;
-}
-
-.presentation__content-subtitle:before {
-  content: '';
-  width: 80px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 12px;
-  -webkit-transform: translateX(-130%);
-  -ms-transform: translateX(-130%);
-  transform: translateX(-130%);
-}
-
 .presentation__content-title {
   font-size: 80px;
   font-weight: 800;
@@ -803,8 +841,236 @@ button {
   }
 }
 
+.map {
+  padding-top: 155px;
+  padding-bottom: 155px;
+  background-color: #1c2121;
+  overflow-x: hidden;
+}
+
+.map .container {
+  background: url("../images/map/map__location-bg.png") no-repeat right 20px;
+}
+
+.map .section-mark,
+.map .section-subtitle {
+  padding-right: 70px;
+}
+
+.map .section-mark {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.map__block {
+  width: 1200px;
+  height: 635px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.map__dots-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.map__dot {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4af6cd;
+  -webkit-box-shadow: 0 0 35px rgba(74, 246, 205, 0.83);
+  box-shadow: 0 0 35px rgba(74, 246, 205, 0.83);
+  position: relative;
+  z-index: 5;
+}
+
+.map__dot:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #4af6cd;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.map .dot-1 {
+  top: 310px;
+  left: 10px;
+}
+
+.map .dot-2 {
+  top: 285px;
+  left: 105px;
+}
+
+.map .dot-3 {
+  top: 320px;
+  left: 275px;
+}
+
+.map .dot-4 {
+  top: 500px;
+  left: 325px;
+}
+
+.map .dot-5 {
+  top: 215px;
+  left: 420px;
+}
+
+.map .dot-6 {
+  top: 550px;
+  left: 500px;
+}
+
+.map .dot-7 {
+  top: 385px;
+  left: 625px;
+}
+
+.map .dot-8 {
+  top: 500px;
+  left: 895px;
+}
+
+.map .dot_arrow-up:before {
+  top: -11px;
+  z-index: 5;
+}
+
+.map__location {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.map__item {
+  visibility: hidden;
+  width: 285px;
+  max-width: 100%;
+  padding: 30px 30px;
+  border-radius: 6px;
+  background-color: rgba(15, 16, 16, 0.7);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 9;
+}
+
+.map .item-1 {
+  top: 60px;
+  right: 25px;
+}
+
+.map .item-2 {
+  top: 35px;
+  right: 280px;
+}
+
+.map .item-3 {
+  top: 70px;
+  right: 360px;
+}
+
+.map .item-4 {
+  top: 250px;
+  right: 575px;
+}
+
+.map .item-5 {
+  top: -35px;
+  right: 745px;
+}
+
+.map .item-6 {
+  top: 300px;
+  right: 910px;
+}
+
+.map .item-7 {
+  top: 125px;
+  right: 1045px;
+}
+
+.map .item-8 {
+  top: 245px;
+  right: 1030px;
+}
+
+.map .item_visible {
+  visibility: visible;
+}
+
+.map__destination {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 17px;
+  position: relative;
+}
+
+.map__destination:after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #4af6cd;
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.map__country {
+  text-transform: capitalize;
+}
+
+.map__conditions {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.map__conditions-item {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.map__conditions-img,
+.map__conditions-text {
+  margin-bottom: 10px;
+}
+
+.map__conditions-text {
+  display: block;
+  font-weight: 800;
+}
+
+.map__conditions-subtext {
+  font-size: 10px;
+  font-weight: 300;
+}
+
 @media (min-width: 1680px) {
-  .section-title {
+  .section-title-sign {
     font-size: 140px;
   }
 
@@ -839,9 +1105,27 @@ button {
   }
 }
 
+@media (min-width: 1980px) {
+  /*<----- Presentation ----->*/
+
+  .presentation .container {
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
 @media (max-width: 1024px) {
-  .section-title {
+  .section-title-sign {
     font-size: 100px;
+  }
+
+  .section-mark {
+    font-size: 16px;
+  }
+
+  .section-mark:before {
+    top: 8px;
   }
 
   /*<----- Presentation ----->*/
@@ -879,14 +1163,6 @@ button {
     padding-right: 40px;
   }
 
-  .presentation__content-subtitle {
-    font-size: 16px;
-  }
-
-  .presentation__content-subtitle:before {
-    top: 8px;
-  }
-
   .presentation__content-title {
     font-size: 60px;
   }
@@ -913,9 +1189,7 @@ button {
 }
 
 @media (min-width: 1024px) {
-  /*<----- Presentation ----->*/
-
-  .section-title,
+  .section-title-sign,
   .presentation__sidebar-title,
   .presentation__content-pagination,
   .presentation__arrows {
@@ -923,7 +1197,9 @@ button {
   }
 
   .presentation__sidebar-search,
-  .presentation__content-controls button {
+  .presentation__content-controls button,
+  .map__dot,
+  .map__dot:before {
     cursor: pointer;
   }
 }
@@ -1032,8 +1308,17 @@ button {
 }
 
 @media (max-width: 576px) {
-  .section-title {
+  .section-title-sign {
     font-size: 60px;
+  }
+
+  .section-mark {
+    font-size: 14px;
+  }
+
+  .section-mark:before {
+    width: 50px;
+    top: 7px;
   }
 
   /*<----- Presentation ----->*/
@@ -1093,14 +1378,6 @@ button {
     margin-left: -50%;
   }
 
-  .presentation__content-subtitle {
-    font-size: 14px;
-  }
-
-  .presentation__content-subtitle:before {
-    top: 7px;
-  }
-
   .presentation__content-title {
     font-size: 52px;
   }
@@ -1156,6 +1433,14 @@ button {
 }
 
 @media (max-width: 414px) {
+  .section-mark {
+    font-size: 12px;
+  }
+
+  .section-mark:before {
+    top: 6px;
+  }
+
   /*<----- Presentation ----->*/
 
   .presentation__sidebar {
@@ -1168,14 +1453,6 @@ button {
 
   .presentation__content-map {
     margin-left: -75%;
-  }
-
-  .presentation__content-subtitle {
-    font-size: 12px;
-  }
-
-  .presentation__content-subtitle:before {
-    top: 6px;
   }
 
   .presentation__content-title {

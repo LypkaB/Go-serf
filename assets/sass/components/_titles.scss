@@ -1,9 +1,44 @@
-.section-title {
-    display: inline-block;
-    width: 100px;
-    @include font(120px, 800, rgba(255, 255, 255, 0.15), 0.76);
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    left: 0;
+.section {
+    &-title {
+        margin-left: 190px;
+        font-size: 80px;
+        font-weight: 800;
+        text-transform: uppercase;
+        position: relative;
+        @include before-line($green, 5px, 0)
+    }
+
+    &-title-sign {
+        display: inline-block;
+        width: 100px;
+        @include font(120px, 800, rgba(255, 255, 255, 0.03), 0.76);
+        text-transform: uppercase;
+        position: absolute;
+        top: 40px;
+        left: -30px;
+    }
+
+    &-mark,
+    &-subtitle {
+        display: block;
+        text-align: right;
+    }
+
+    &-mark {
+        @include font(22px, 400, rgba(255, 255, 255, 0.5));
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        position: relative;
+        @include before-line(rgba(255, 255, 255, 0.5), 12px, $translateX: translateX(-130%));
+    }
+
+    &-subtitle {
+        font-size: 40px;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 200;
+        }
+    }
 }

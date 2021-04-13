@@ -1,6 +1,17 @@
 @media (max-width: 576px) {
-    .section-title {
-        font-size: 60px;
+    .section {
+        &-title-sign {
+            font-size: 60px;
+        }
+
+        &-mark {
+            font-size: 14px;
+
+            &:before {
+                width: 50px;
+                top: 7px;
+            }
+        }
     }
 
     /*<----- Presentation ----->*/
@@ -56,14 +67,6 @@
 
             &-map {
                 margin-left: -50%;
-            }
-
-            &-subtitle {
-                font-size: 14px;
-
-                &:before {
-                    top: 7px;
-                }
             }
 
             &-title {

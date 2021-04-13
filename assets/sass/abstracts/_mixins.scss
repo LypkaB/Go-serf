@@ -35,14 +35,53 @@
     }
 }
 
-@mixin before-line {
+@mixin before-line($bg-color: null, $pos-top: 0, $pos-right: null, $translateX: null) {
     &:before {
         content: '';
         width: 80px;
         height: 1px;
-        background-color: rgba(255, 255, 255, 0.5);
+
+        @if $bg-color != null {
+            background-color: $bg-color;
+        }
+
         position: absolute;
-        top: 12px;
-        transform: translateX(-130%);
+        top: $pos-top;
+
+        @if $pos-right != null {
+            right: $pos-right;
+        }
+
+        @if $translateX != null {
+            transform: $translateX;
+        }
+    }
+}
+
+@mixin after-line() {
+    &:after {
+        content: '';
+        width: 80px;
+        height: 1px;
+        background-color: $green;
+        position: absolute;
+        left: 0;
+        bottom: -50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin before-map-dot() {
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid $green;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: absolute;
+        top: 0;
     }
 }

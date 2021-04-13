@@ -20,9 +20,29 @@ window.addEventListener('DOMContentLoaded', () => {
     /*<----- Adaptive for slider map ----->*/
     const mapPresentation = document.querySelectorAll('.presentation__content-map svg');
 
-    if (document.querySelector('body').clientHeight >= 940) {
+    if (window.screen.height >= 940) {
         mapPresentation.forEach((item, i) => {
             mapPresentation[i].setAttribute('height', '700');
         })
     }
+
+    /*<----- Map dots hover ----->*/
+    const mapDots = document.querySelectorAll('.map__dot'),
+          mapItems = document.querySelectorAll('.map__item'),
+          mapItemVisible = 'item_visible',
+          mapDotArrowUp = 'dot_arrow-up';
+
+    mapDots.forEach((item, i) => {
+        mapDots[i].addEventListener('mouseenter', () => {
+            [].forEach.call(mapItems, (item) => {
+                item.classList.remove(mapItemVisible);
+            });
+            [].forEach.call(mapDots, (dot) => {
+                dot.classList.remove(mapDotArrowUp);
+            });
+
+            mapItems[i].classList.add(mapItemVisible);
+            mapDots[i].classList.add(mapDotArrowUp);
+        })
+    })
 })
