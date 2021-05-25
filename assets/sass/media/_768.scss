@@ -61,12 +61,8 @@
             }
         }
 
-        &__arrows {
+        .arrows-down {
             left: 50px;
-
-            &.arrows_hidden {
-                visibility: hidden;
-            }
 
             &.arrows_show-anim {
                 visibility: hidden;
@@ -76,6 +72,29 @@
             @keyframes show-anim {
                 to { visibility: visible }
             }
+        }
+    }
+
+    /*<----- Map ----->*/
+    .map {
+        &__item {
+            height: fit-content;
+            padding: 20px;
+            position: relative;
+        }
+
+        &__conditions {
+            display: none;
+        }
+
+        .conditions_visible {
+            display: flex;
+        }
+
+        .arrows-down {
+            display: block;
+            right: 15px;
+            bottom: 5px;
         }
     }
 }

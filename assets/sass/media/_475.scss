@@ -16,9 +16,14 @@
             }
         }
 
-        &__arrows {
+        .arrows-down {
             left: 43px;
         }
+    }
+
+    /*<----- Map ----->*/
+    .map__location {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

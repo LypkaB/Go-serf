@@ -1,36 +1,29 @@
 .map {
     padding-top: 155px;
-    padding-bottom: 155px;
+    padding-bottom: 50px;
     background-color: #1c2121;
-    overflow-x: hidden;
 
     .container {
         background: url('../images/map/map__location-bg.png') no-repeat right 20px;
     }
 
-    .section {
-        &-mark,
-        &-subtitle {
-            padding-right: 70px;
-        }
-
-        &-mark {
-            margin-top: 50px;
-            margin-bottom: 15px;
-        }
+    .section-mark {
+        margin-top: 50px;
+        margin-bottom: 15px;
     }
 
     &__block {
         width: 1200px;
         height: 635px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        background: url('../images/map/map__bg.svg') no-repeat center;
         position: relative;
     }
 
     &__dots-block {
-        position: absolute;
-        top: 0;
-        left: 0;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__dot {
@@ -47,43 +40,41 @@
 
     .dot {
         &-1 {
-            top: 310px;
-            left: 10px;
+            top: 340px;
         }
 
         &-2 {
-            top: 285px;
-            left: 105px;
+            top: 260px;
+            right: 50px;
         }
 
         &-3 {
-            top: 320px;
-            left: 275px;
+            top: 315px;
         }
 
         &-4 {
-            top: 500px;
-            left: 325px;
+            top: 545px;
+            right: 165px;
         }
 
         &-5 {
             top: 215px;
-            left: 420px;
+            right: 145px;
         }
 
         &-6 {
-            top: 550px;
-            left: 500px;
+            top: 515px;
+            right: 175px;
         }
 
         &-7 {
-            top: 385px;
-            left: 625px;
+            top: 395px;
+            right: 215px;
         }
 
         &-8 {
-            top: 500px;
-            left: 895px;
+            top: 495px;
+            right: 80px;
         }
 
         &_arrow-up:before {
@@ -96,14 +87,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        display: flex;
     }
 
     &__item {
-        visibility: hidden;
+        display: none;
         width: 285px;
         max-width: 100%;
-        padding: 30px 30px;
+        padding: 30px;
         border-radius: 6px;
         background-color: rgba(15, 16, 16, 0.7);
         text-transform: uppercase;
@@ -113,47 +103,46 @@
 
     .item {
         &-1 {
-            top: 60px;
-            right: 25px;
+            top: 90px;
         }
 
         &-2 {
-            top: 35px;
-            right: 280px;
+            top: 10px;
+            left: -17px;
         }
 
         &-3 {
-            top: 70px;
-            right: 360px;
+            top: 65px;
+            left: 205px;
         }
 
         &-4 {
-            top: 250px;
-            right: 575px;
+            top: 245px;
+            left: 280px;
         }
 
         &-5 {
-            top: -35px;
-            right: 745px;
+            top: -30px;
+            left: 400px;
         }
 
         &-6 {
-            top: 300px;
-            right: 910px;
+            top: 260px;
+            left: 540px;
         }
 
         &-7 {
-            top: 125px;
-            right: 1045px;
+            top: 130px;
+            left: 665px;
         }
 
         &-8 {
-            top: 245px;
-            right: 1030px;
+            top: 235px;
+            left: 960px;
         }
 
         &_visible {
-            visibility: visible;
+            display: block;
         }
     }
 
@@ -193,5 +182,9 @@
             font-size: 10px;
             font-weight: 300;
         }
+    }
+
+    .arrows-down {
+        display: none;
     }
 }

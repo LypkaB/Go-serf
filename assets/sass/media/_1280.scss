@@ -1,0 +1,13 @@
+@media (max-width: 1280px) {
+    /*<----- Map ----->*/
+    .map {
+        &__block {
+            width: 990px;
+            background-size: contain;
+        }
+
+        .item-5 {
+            top: -15px;
+        }
+    }
+}

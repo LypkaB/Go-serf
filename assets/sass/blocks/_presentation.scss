@@ -5,10 +5,16 @@
         height: 100vh;
     }
 
-    .section-title-sign {
-        top: 0;
-        left: 0;
-        color: rgba(255, 255, 255, 0.15);
+    .section {
+        &-title-sign {
+            top: 0;
+            left: 0;
+            color: rgba(255, 255, 255, 0.15);
+        }
+
+        &-mark {
+            padding-right: 0;
+        }
     }
 
     &__sidebar {
@@ -204,18 +210,8 @@
         }
     }
 
-    &__arrows {
-        position: absolute;
+    .arrows-down {
         left: 150px;
         bottom: 20px;
-
-        .animation-arrows {
-            animation: anim-arrows 2s infinite 2s;
-        }
-
-        @keyframes anim-arrows {
-            0% { transform: translateY(0) }
-            50% { transform: translateY(35%) }
-        }
     }
 }

@@ -1,0 +1,16 @@
+.arrows-down {
+    position: absolute;
+
+    .animation-arrows {
+        animation: anim-arrows 2s infinite 2s;
+    }
+
+    &.arrows_hidden {
+        visibility: hidden;
+    }
+
+    @keyframes anim-arrows {
+        0% { transform: translateY(0) }
+        50% { transform: translateY(35%) }
+    }
+}

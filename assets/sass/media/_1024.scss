@@ -1,7 +1,17 @@
 @media (max-width: 1024px) {
     .section {
-        &-title-sign {
-            font-size: 100px;
+        &-mark,
+        &-subtitle {
+            padding-right: 40px;
+        }
+
+        &-title {
+            margin-left: 130px;
+            font-size: 60px;
+
+            &-sign {
+                font-size: 100px;
+            }
         }
 
         &-mark {
@@ -10,6 +20,10 @@
             &:before {
                 top: 8px;
             }
+        }
+
+        &-subtitle {
+            font-size: 32px;
         }
     }
 
@@ -74,13 +88,48 @@
             }
         }
     }
+
+    /*<----- Map ----->*/
+    .map {
+        padding-top: 50px;
+        padding-bottom: 30px;
+
+        &__block {
+            width: 100%;
+            height: auto;
+            background: url('../images/map/map__bg-min.png') no-repeat center;
+        }
+
+        &__dots-block {
+            display: none;
+        }
+
+        &__location,
+        &__item {
+            position: initial;
+        }
+
+        &__location {
+            margin-top: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        &__item {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 @media (min-width: 1024px) {
     .section-title-sign,
     .presentation__sidebar-title,
     .presentation__content-pagination,
-    .presentation__arrows {
+    .arrows-down {
         cursor: default;
     }
 
