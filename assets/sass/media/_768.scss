@@ -97,4 +97,37 @@
             bottom: 5px;
         }
     }
+
+    /*<----- Places ----->*/
+    .places {
+        padding-bottom: 50px;
+
+        &__wrap {
+            padding-top: 0;
+        }
+
+        &__slider {
+            &-item {
+                min-height: 600px;
+
+                &:nth-child(4n + 1),
+                &:nth-child(even) {
+                    margin-top: 0;
+                }
+            }
+
+            &-img {
+                height: 600px;
+            }
+
+            &-controls {
+                top: initial;
+                bottom: -35px;
+
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
 }

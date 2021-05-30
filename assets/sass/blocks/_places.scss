@@ -1,0 +1,134 @@
+.places {
+    background-color: $bg-color;
+    padding-bottom: 130px;
+
+    &__wrap {
+        padding-top: 15px;
+        position: relative;
+    }
+
+    &__slider {
+        &-item,
+        &-img {
+            position: relative;
+        }
+
+        &-item {
+            min-height: 750px;
+
+            &:nth-child(4n + 1) {
+                margin-top: 32px;
+            }
+
+            &:nth-child(even) {
+                margin-top: 70px;
+            }
+
+            &:hover {
+                .places__slider-img::after {
+                    content: none;
+                }
+
+                .places__slider-view {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &-img {
+            height: 750px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(28, 33, 33, 0.85);
+            }
+        }
+
+        &-title,
+        &-location {
+            position: absolute;
+            text-transform: uppercase;
+        }
+
+        &-title {
+            width: 50px;
+            top: 72px;
+            left: 42px;
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        &-location {
+            left: 38px;
+            bottom: 80px;
+            font-size: 18px;
+            letter-spacing: 6px;
+            white-space: nowrap;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
+
+        &-view {
+            visibility: hidden;
+            position: absolute;
+            left: 50%;
+            bottom: 15px;
+            transform: translateX(-50%);
+
+            &::after {
+                content: '';
+                width: 190px;
+                height: 80px;
+                background-color: $green;
+                position: absolute;
+                right: -15px;
+                bottom: -15px;
+                z-index: -1;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                @include font(40px, 800, white);
+                text-transform: uppercase;
+                text-decoration: none;
+                margin-right: 20px;
+
+                span {
+                    margin-right: 35px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 20px;
+                        height: 1px;
+                        background-color: white;
+                        position: absolute;
+                        right: -29px;
+                        bottom: 23px;
+                    }
+                }
+
+                img {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        &-controls {
+            position: absolute;
+            top: 0;
+            right: 60px;
+        }
+    }
+}

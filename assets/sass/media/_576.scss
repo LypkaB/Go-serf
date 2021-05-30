@@ -103,4 +103,57 @@
     .map__location {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /*<----- Places ----->*/
+    .places__slider {
+        &-img,
+        &-title,
+        &-location {
+            text-align: center;
+        }
+
+        &-img img,
+        &-title {
+            width: initial;
+        }
+
+        &-title {
+            font-size: 26px;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-location {
+            width: 200px;
+            white-space: initial;
+            writing-mode: initial;
+            font-size: 16px;
+            bottom: initial;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            span {
+                display: none;
+            }
+        }
+
+        &-view {
+            bottom: 10px;
+
+            &::after {
+                width: 140px;
+                height: 60px;
+            }
+
+            a {
+                font-size: 30px;
+
+                span::after {
+                    bottom: 17px;
+                }
+            }
+        }
+    }
 }

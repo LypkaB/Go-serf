@@ -123,20 +123,28 @@
             width: 100%;
         }
     }
+
+    /*<----- Places ----->*/
+    .places__slider-controls {
+        right: 36px;
+    }
 }
 
 @media (min-width: 1024px) {
     .section-title-sign,
     .presentation__sidebar-title,
     .presentation__content-pagination,
-    .arrows-down {
+    .arrows-down,
+    .places__slider-title,
+    .places__slider-location {
         cursor: default;
     }
 
     .presentation__sidebar-search,
     .presentation__content-controls button,
     .map__dot,
-    .map__dot:before {
+    .map__dot:before,
+    .places__slider-controls button {
         cursor: pointer;
     }
 }

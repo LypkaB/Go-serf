@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     /*<----- Presentation slider ----->*/
     const presentationSlider = tns({
         container: '.presentation__content-slider',
+        mouseDrag: true,
         navContainer: '.presentation__content-pagination',
         controlsContainer: '.presentation__content-controls'
     })
@@ -106,5 +107,46 @@ window.addEventListener('DOMContentLoaded', () => {
             mapItems[i].querySelector('.map__conditions').classList.toggle('conditions_visible');
             mapItems[i].querySelector('.map .arrows-down').classList.toggle('arrows_hidden');
         })
+    })
+
+    /*<----- Places slider ----->*/
+    const placesSlider = tns({
+        container: '.places__slider',
+        items: 4,
+        loop: false,
+        mouseDrag: true,
+        controlsContainer: '.places__slider-controls',
+        responsive: {
+            320: {
+                items: 1
+            },
+            475: {
+                items: 1
+            },
+            576: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            },
+            1024: {
+                items: 3
+            },
+            1280: {
+                items: 3
+            },
+            1440: {
+                items: 4
+            },
+            1680: {
+                items: 4
+            },
+            1920: {
+                items: 4
+            }
+        }
     })
 })

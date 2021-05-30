@@ -25,6 +25,11 @@
     .map__location {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    /*<----- Places ----->*/
+    .places__slider-controls {
+        right: 15px;
+    }
 }
 
 @media (max-width: 414px) {
@@ -70,5 +75,10 @@
     /*<----- Presentation ----->*/
     .presentation__content-map {
         margin-left: -100%;
+    }
+
+    /*<----- Places ----->*/
+    .places__slider-img img {
+        width: 100%;
     }
 }
